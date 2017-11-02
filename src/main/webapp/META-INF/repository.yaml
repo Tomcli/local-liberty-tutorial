@@ -1,0 +1,9 @@
+id: https://github.com/IBM-Bluemix/local-liberty-tutorial
+event_id: web
+event_organizer: dev-journeys
+runtimes:
+  - Cloud Foundry
+services:
+  - Cloudant NoSQL DB
+  - Personality Insights
+language: java

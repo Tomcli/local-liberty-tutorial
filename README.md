@@ -140,21 +140,29 @@ To see them, run the following command using the Cloud Foundry CLI:
   ```
 For more detailed information on troubleshooting your application, see the [Troubleshooting section](https://www.ng.bluemix.net/docs/troubleshoot/tr.html) in the Bluemix documentation.
 
-## Privacy Notice
-This application includes code to track deployments to IBM Bluemix and other Cloud Foundry platforms.
-The following information is sent to a [Deployment Tracker](https://github.com/IBM-Bluemix/cf-deployment-tracker-service)
-service on each deployment:
+# Privacy Notice
+Sample web applications that include this tracking library may be configured to track
+deployments to [IBM Cloud](https://www.bluemix.net/) and other Cloud Foundry platforms.
+The following information is sent to a [Deployment Tracker](https://github.com/IBM/metrics-collector-service)
+service on each deployment by default:
+* Application Name (`application_name`)
+* Application GUID (`application_id`)
+* Application instance index (`instance_index`)
+* Space ID (`space_id`) or OS username
+* Application Version (`application_version`)
+* Application URIs (`application_uris`)
+* Cloud Foundry API (`cf_api`)
+* Labels and names of bound services
+* Number of instances for each bound service and associated plan information
+* Metadata in the repository.yaml file
 
-* Application Name (application_name)
-* Space ID (space_id)
-* Application Version (application_version)
-* Application URIs (application_uris)
-
-This data is collected from the VCAP_APPLICATION environment variable in IBM Bluemix and other Cloud Foundry platforms. This data is used by IBM to track metrics around deployments of sample applications to IBM Bluemix. Only deployments of sample applications that include code to ping the Deployment Tracker service will be tracked.
+This data is collected from the `repository.yaml` file in the sample application and the `VCAP_APPLICATION` and `VCAP_SERVICES` environment variables in IBM Cloud and other Cloud Foundry platforms. This data is used by IBM to track metrics around 
+deployments of sample applications to IBM Cloud to measure the usefulness of our examples,
+so that we can continuously improve the content we offer to you. 
 
 ## Disabling Deployment Tracking
 
-To disable deployment tracking remove cf-java-app-tracker-client dependencies from the pom.xml.
+To disable deployment tracking remove java-metrics-tracker-client dependencies from the pom.xml.
 
 [bluemix_signup_url]: https://console.ng.bluemix.net/?cm_mmc=GitHubReadMe-_-BluemixSampleApp-_-Node-_-Workflow
 [cloud_foundry_url]: https://github.com/cloudfoundry/cli

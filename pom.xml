@@ -17,9 +17,14 @@
       <version>1.0.11</version>
     </dependency>
     <dependency>
-      <groupId>com.ibm.bluemix.deploymenttracker</groupId>
-      <artifactId>cf-java-app-tracker-client</artifactId>
-      <version>0.1.0</version>
+      <groupId>com.ibm.journeycode.metricstracker</groupId>
+      <artifactId>java-metrics-tracker-client</artifactId>
+      <version>0.3.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.yaml</groupId>
+      <artifactId>snakeyaml</artifactId>
+      <version>1.19</version>
     </dependency>
     <!-- End of dependency tracker -->
     
